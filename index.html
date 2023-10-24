@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="header container">
+      <h1 class="logo"><span>BE</span>MOVIES</h1>
+
+      <div>
+        <input type="checkbox" id="check-menu" />
+        <label for="check-menu">
+          <div class="close_menu">&#128473;</div>
+          <div class="burger_menu">☰</div>
+        </label>
+        <ul class="nav header_nav">
+          <li class="search_nav">SEARCH</li>
+          <li class="latest_nav">LATEST</li>
+          <li class="genres_nav">GENRES</li>
+          <li class="register_nav">REGISTER</li>
+          <li class="signin_nav">SIGNIN</li>
+        </ul>
+      </div>
+    </section>
+    <!-- ///////////////////////////////////// -->
+    <section class="modal_window">
+      <form class="modal_content">
+        <img class="close_modal" src="img/cross.svg" alt="cross" />
+        <button class="btn_signup btn">SIGNUP</button>
+        <button class="btn_login btn">LOGIN</button>
+        <br />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Username"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="password"
+          required
+        />
+        <br />
+        <input type="checkbox" name="checkbox" id="checkbox" />
+        <label for="checkbox">Remember me</label>
+        <br />
+        <button class="btn_login_primary btn">LOGIN</button>
+        <p class="forgot_password">I forgot my password</p>
+        <p>Not a member yet? <span class="signup_paragraph">Sign up</span></p>
+      </form>
+    </section>
+    <!-- ////////////////////////////////////////// -->
+    <section class="search container">
+      <form class="primar_search">
+        <input
+          type="text"
+          name="search_input"
+          class="search_input"
+          placeholder="Search..."
+        />
+        <button class="btn_search">&#8594;</button>
+      </form>
+
+      <p class="search_result_paragraph title">Results for “godfather”</p>
+      <div class="swiper swiperResult">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper_img">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/18d4/e152/3a9723ae5397841adf7fbaed84bd30b2?Expires=1699228800&Signature=dFbxDSkYk7HqiE3NvJT-tMKeDxldU7~2vNXVqn0FkYodDb4qJ511EgOTKmqP11qyHWkNR-Ht8UedqFkvtCKe6W-3rX8-Q96qNODAe3LlmZ4F-DlSTceQkahk3cpYIpEcP5099GZ9OZTTUYJm9JB2aGB~m-LfJaXXiR5tVDWWU7gX7JAoRzYqHtrRdCpU82Q9al92QBeBBdIcfxIaK4s9dKExrfu7Uga3b8rnINKzIaq2qSdRCNHBHV1yYXDB-TxzIWROQRAo88aHK03XdNvpG3yyk-dhBq5eA82niTnAboFO85WFlEXOCW-uC0BT0CVWpIc4DmVIwQazA830IKVWKQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt=""
+              />
+            </div>
+            <div class="mouseenter_film_info"></div>
+          </div>
+          <div class="swiper-slide">Slide 2</div>
+        </div>
+      </div>
+      <div class="swiper_btn_wraper">
+        <div class="swiper-button-next result-button-next">
+          <img src="img/arrow-next.svg" alt="" />
+        </div>
+        <div class="swiper-button-prev result-button-prev">
+          <img src="img/arrow-prev.svg" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- //////////////////////////////////////// -->
+    <section class="Latest_releases container">
+      <p class="title">Latest releases</p>
+      <div class="swiper swiper_latest_releases">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+        </div>
+      </div>
+      <div class="swiper_btn_wraper">
+        <div class="swiper-button-next latest-button-next">
+          <img src="img/arrow-next.svg" alt="" />
+        </div>
+        <div class="swiper-button-prev latest-button-prev">
+          <img src="img/arrow-prev.svg" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- //////////////////////////////////////////// -->
+    <section class="movies_by_genre container">
+      <div class="block">
+        <h1>Movies by genre</h1>
+        <ul class="genre_nav">
+          <li class="genre_nav_checked">Comedy</li>
+          <li>Drama</li>
+          <li>Action</li>
+          <li>Romance</li>
+          <li>Fantasy</li>
+          <li>Animation</li>
+        </ul>
+      </div>
+      <p class="movie_genre_paragraph title">Comedy</p>
+      <div class="swiper swiper_latest_releases">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+        </div>
+      </div>
+      <div class="swiper_btn_wraper">
+        <div class="swiper-button-next genre-button-next">
+          <img src="img/arrow-next.svg" alt="" />
+        </div>
+        <div class="swiper-button-prev genre-button-prev">
+          <img src="img/arrow-prev.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ////////////////////////////////////// -->
+
+    <section class="footer container">
+      <h1 class="logo"><span>BE</span>MOVIES</h1>
+      <ul class="nav footer_nav">
+        <li class="search_nav">SEARCH</li>
+        <li class="latest_nav">LATEST</li>
+        <li class="genres_nav">GENRES</li>
+        <li class="register_nav">REGISTER</li>
+        <li class="signin_nav">SIGNIN</li>
+      </ul>
+      <p>@2023 - All rights reserved</p>
+    </section>
+
+    <!-- ///////////////////////////////////////// -->
+
+    <section class="film_modal">
+      <div class="film_info">
+        <img class="close_modal_film" src="img/cross.svg" alt="" />
+
+        <img
+          class="film_img"
+          src="https://s3-alpha-sig.figma.com/img/18d4/e152/3a9723ae5397841adf7fbaed84bd30b2?Expires=1699228800&Signature=dFbxDSkYk7HqiE3NvJT-tMKeDxldU7~2vNXVqn0FkYodDb4qJ511EgOTKmqP11qyHWkNR-Ht8UedqFkvtCKe6W-3rX8-Q96qNODAe3LlmZ4F-DlSTceQkahk3cpYIpEcP5099GZ9OZTTUYJm9JB2aGB~m-LfJaXXiR5tVDWWU7gX7JAoRzYqHtrRdCpU82Q9al92QBeBBdIcfxIaK4s9dKExrfu7Uga3b8rnINKzIaq2qSdRCNHBHV1yYXDB-TxzIWROQRAo88aHK03XdNvpG3yyk-dhBq5eA82niTnAboFO85WFlEXOCW-uC0BT0CVWpIc4DmVIwQazA830IKVWKQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+          alt=""
+        />
+
+        <div class="film_discription">
+          <h1 class="film_title">The Godfather</h1>
+          <p class="year"></p>
+          <p class="rating"><img src="img/star.svg" alt="" /> 8.7</p>
+          <p class="genrs">Crime / Drama</p>
+          <p class="description">
+            Spanning the years 1945 to 1955, a chronicle of the fictional
+            Italian-American Corleone crime family. When organized crime family
+            patriarch, Vito Corleone barely survives an attempt on his life, his
+            youngest son, Michael steps in to take care of the would-be killers,
+            launching a campaign of bloody revenge.
+          </p>
+          <div class="cast_block">
+            <span>CAST:</span>
+            <p>Marlon Brando, Al Pacino, James Caan, Robert Duvall</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
