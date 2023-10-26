@@ -33,6 +33,14 @@ let swiper_2=new Swiper(".swiper_latest_releases",{
       prevEl : ".latest-button-prev",
     },
 });
+let swiper_3=new Swiper(".swiper_latest_releases",{
+    slidesPerView : 4 ,
+    spaceBetween : 20,
+    navigation : {
+      nextEl : ".latest-button-next",
+      prevEl : ".latest-button-prev",
+    },
+});
 //--------------------------------------------------//
 //--------------------LISTENERS---------------------//
 //--------------------------------------------------//
@@ -80,13 +88,21 @@ async function getLatests(){
     try{
         let latestContainer=document.querySelector(".swiper_latest_releases").querySelector(".swiper-wrapper");
         clear(latestContainer);
-        let now=Date.now();
+        /* let now=Date.now();
         let before=new Date(now-(30*24*60*60*1000));
-        let response=await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=6b3be1c317c5f94e0913ba269fb2433a&primary_release_date.gte=${before}&primary_release_date.lte=${now}`);
+         */
+        let dateNow=new Date(Date.now());
+        console.log(dateNow);
+        let dateBefore=new Date(dateNow.getFullYear(),dateNow.getMonth(),dateNow.getDay()-30);
+
+        let response= await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=6b3be1c317c5f94e0913ba269fb2433a&primary_release_date.gte=${dateBefore.getTime()}&primary_release_date.lte=${dateNow.getTime()}`);
+        //let response=await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=6b3be1c317c5f94e0913ba269fb2433a&primary_release_date.gte=2023-9-26`,options);
         let data=await response.json();
+        console.log(data.results);
         data.results.forEach(element => {
-            if(element.poster_path){
-                imagesURL.push(`https://images.tmdb.org/t/p/original/${element.poster_path}`);
+            if(element.poster_path && !imagesURL.includes(element.poster_path)){
+                console.log(`https://images.tmdb.org/t/p/original${element.poster_path}`);
+                imagesURL.push(`https://images.tmdb.org/t/p/original${element.poster_path}`);
             }
         });
         displayImages(imagesURL,latestContainer);
@@ -96,10 +112,6 @@ async function getLatests(){
     }
     
 }
-
-
-
-
 
 //the container is the swiper-wrapper
 function clear(container){
@@ -113,6 +125,7 @@ function clear(container){
 
 //the container is the swiper-wrapper
 function displayImages(images,container){
+
     images.forEach((element)=>{
         let slide=document.createElement("div");
         slide.classList.add("swiper-slide");
@@ -122,3 +135,5 @@ function displayImages(images,container){
         container.appendChild(slide);
     });
 }
+
+
