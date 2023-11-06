@@ -184,6 +184,7 @@ p {
 }
 .swiper-slide:hover .mouseenter_film_info {
   left: 0px;
+  background-color: rgba(0,0, 0, 0.8);
 }
 .mouseenter_film_info {
   padding: 70px 30px;
@@ -270,7 +271,7 @@ p {
       rgba(0, 0, 0, 0.9) 0%,
       rgba(0, 0, 0, 0.9) 100%
     ),
-    url(<path-to-image>), lightgray 50% / cover no-repeat;
+   /*  url(<path-to-image>), lightgray 50% / cover no-repeat; */
 }
 
 /* //////////////MOVIES BY GENRE//////////// */
@@ -341,36 +342,38 @@ p {
 /* ///////////MODAL FILM/////////// */
 
 .film_modal {
-  display: none;
+  /* display: none; */
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
   width: 100vw;
-  height: 100vh;
+  max-height: 100vh;
   margin: 0 auto;
   background-color: #141517d6;
 }
 
 .film_info {
   margin: auto;
-  margin-top: 100px;
+  margin-top: 35px;
   padding: 74px 79px 50px 79px;
   position: relative;
   width: 742px;
+  height: 90%;
   background-color: #000;
-  display: grid;
+  display: grid;  
   grid-template-columns: 1fr 1.5fr;
   gap: 58px;
 }
-.close_modal_film {
+/* .close_modal_film {
   position: absolute;
   top: 20px;
   left: 20px;
-}
+} */
 .film_img {
   width: 100%;
-  object-fit: cover;
+  max-height: 351px;
+  object-fit: contain;
 }
 
 .film_title {
@@ -485,4 +488,57 @@ p {
     position: relative;
     z-index: 999;
   }
+}
+
+/*****************************************/
+/****************ADDITIONS****************/
+/*****************************************/
+img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+a{
+  text-decoration: none;
+}
+.close_modal_film {
+  /* position: absolute; */
+  /* top: 20px;
+  left: 20px; */
+  object-fit: cover;
+}
+.test{
+  position: relative;
+  top: -50px;
+  left: -50px;
+  width: 27px;
+  height: 27px;
+}
+.display_on{
+  display : flex;
+  height: 100%;
+ 
+}
+.display_off{
+  display: none;
+}
+
+.mouseenter_film_info img{
+    max-height: 35px;
+    max-width: 35px;
+}
+.film_info{
+  display: flex;
+  flex-direction: column;
+}
+.modal_text_pic{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+}
+.confirm{
+  padding-top: 25px;
+  display: none;
 }
