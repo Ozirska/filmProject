@@ -257,6 +257,8 @@ async function getMoviesByGenre(genre) {
     displayImages(imagesURL, genresContainer, data);
     // imagesURL.push(`https://images.tmdb.org/t/p/original${element.poster_path}`);
     swiper_3.update();
+
+    document.querySelector(".movie_genre_paragraph").textContent = `${genre}`;
   } catch (err) {
     console.log(err);
   }
@@ -413,3 +415,12 @@ function getRegisterObject() {
 // 28 -10 -2023 --> modal works but...
 
 //signup and register todo ASAP
+
+/////////////////burger menu//////////////////
+
+const checkMenu = document.getElementById("check-menu");
+const headerNav = document.querySelector(".header_nav");
+
+headerNav.addEventListener("click", () => {
+  checkMenu.checked = false;
+});
