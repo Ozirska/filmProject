@@ -17,6 +17,9 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* ////////// HEADER //////////// */
 
@@ -96,6 +99,7 @@ body {
 .btn_login {
   width: 144px;
   height: 54px;
+  border: 1px solid #fff;
 }
 input {
   color: #000;
@@ -185,18 +189,20 @@ p {
 .swiper-slide:hover .mouseenter_film_info {
   left: 0px;
   visibility: visible;
-  background-color: rgba(0,0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .mouseenter_film_info {
   width: 100%;
   height: 100%;
-  padding: 50px 30px;
+  padding: 0px 30px;
   background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.9) 0%,
     rgba(0, 0, 0, 0.9) 100%
   );
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   z-index: 2;
   position: absolute;
   top: 0;
@@ -204,11 +210,13 @@ p {
   text-align: center;
   visibility: hidden;
 }
+
 .film_title {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 23px;
 }
+
 .film_year {
   color: #b0b0b0;
   font-size: 20px;
@@ -216,7 +224,7 @@ p {
   margin-bottom: 30px;
 }
 .film_genres {
-  font-family: Inter;
+  font-family: "Inter";
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 15px;
@@ -224,6 +232,7 @@ p {
 .mouseenter_film_info img {
   width: 35px;
   height: 35px;
+  margin: 0 auto;
 }
 .film_points {
   color: #c00;
@@ -232,14 +241,62 @@ p {
   margin-top: 10px;
 }
 
+@media screen and (max-width: 900px) {
+  .mouseenter_film_info {
+    padding: 20px;
+  }
+  .film_title {
+    font-size: 15px !important;
+    margin-bottom: 15px !important;
+  }
+  .film_year {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .film_genres {
+    font-size: 9px;
+    margin-bottom: 5px;
+  }
+  .mouseenter_film_info img {
+    width: 20px;
+    height: 20px;
+  }
+  .film_points {
+    font-size: 23px;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  /* .mouseenter_film_info {
+    padding: 10px;
+  } */
+  .film_title {
+    font-size: 8px !important;
+    margin-bottom: 7px !important;
+  }
+  .film_year {
+    font-size: 6px !important;
+    margin-bottom: 10px;
+  }
+  .film_genres {
+    font-size: 4px !important;
+    margin-bottom: 5px;
+  }
+  .mouseenter_film_info img {
+    width: 15px !important;
+    height: 15px !important;
+  }
+  .film_points {
+    font-size: 17px;
+    margin-top: 5px;
+  }
+}
 /* ///////////SEARCH SWIPPER////////// */
 
 .swiper {
   width: 92%;
-  height: 351px;
-
-  margin: 0 44px;
-  margin-bottom: 95px;
+  margin: 0 44px 95px 44px;
 }
 
 .swiper_btn_wraper {
@@ -258,6 +315,52 @@ p {
   left: 0;
   top: -275px;
 }
+
+@media screen and (max-width: 1000px) {
+  .swiper {
+    width: 89%;
+  }
+  .swiper-button-next {
+    top: -210px;
+  }
+  .swiper-button-prev {
+    top: -210px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .swiper {
+    width: 87%;
+  }
+  .swiper-button-next {
+    top: -160px;
+  }
+  .swiper-button-prev {
+    top: -160px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .swiper {
+    width: 85%;
+  }
+  .swiper-button-next {
+    top: -150px;
+  }
+  .swiper-button-prev {
+    top: -150px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .swiper {
+    width: 79%;
+  }
+  .swiper-button-next {
+    top: -140px;
+  }
+  .swiper-button-prev {
+    top: -140px;
+  }
+}
+
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
   content: "" !important;
@@ -300,11 +403,13 @@ img {
 
 @media screen and (max-width: 640px) {
   .genre_nav {
+    width: 100%;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border: none;
     /* padding: 0 20px; */
-    margin-left: 10px;
+    /* margin-left: 10px; */
   }
 }
 .genre_nav li {
@@ -363,15 +468,11 @@ img {
   width: 742px;
   height: 90%;
   background-color: #000;
-  display: grid;  
+  display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 58px;
 }
-/* .close_modal_film {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-} */
+
 .film_img {
   width: 100%;
   max-height: 351px;
@@ -495,13 +596,13 @@ img {
 /*****************************************/
 /****************ADDITIONS****************/
 /*****************************************/
-img{
+img {
   height: 100%;
   width: 100%;
   object-fit: contain;
 }
 
-a{
+a {
   text-decoration: none;
 }
 .close_modal_film {
@@ -510,37 +611,36 @@ a{
   left: 20px; */
   object-fit: cover;
 }
-.test{
+.test {
   position: relative;
   top: -50px;
   left: -50px;
   width: 27px;
   height: 27px;
 }
-.display_on{
-  display : flex;
+.display_on {
+  display: flex;
   height: 100%;
- 
 }
-.display_off{
+.display_off {
   display: none;
 }
 
-.mouseenter_film_info img{
-    max-height: 35px;
-    max-width: 35px;
+.mouseenter_film_info img {
+  max-height: 35px;
+  max-width: 35px;
 }
-.film_info{
+.film_info {
   display: flex;
   flex-direction: column;
 }
-.modal_text_pic{
-  display:flex;
+.modal_text_pic {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 50px;
 }
-.confirm{
+.confirm {
   padding-top: 25px;
   display: none;
 }

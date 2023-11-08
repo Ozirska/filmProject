@@ -21,9 +21,9 @@
           <div class="burger_menu">☰</div>
         </label>
         <ul class="nav header_nav">
-          <a href="#"><li class="search_nav">SEARCH</li></a>
+          <a href="#search"><li class="search_nav">SEARCH</li></a>
           <a href="#latest"><li class="latest_nav">LATEST</li></a>
-          <a href="#"><li class="genres_nav">GENRES</li></a>
+          <a href="#genre"><li class="genres_nav">GENRES</li></a>
           <a href="#"><li class="register_nav">REGISTER</li></a>
           <a href="#"><li class="signin_nav">SIGNIN</li></a>
         </ul>
@@ -33,7 +33,7 @@
     <section class="modal_window">
       <form class="modal_content">
         <div class="test">
-            <img class="close_modal" src="img/cross.svg" alt="cross" />
+          <img class="close_modal" src="img/cross.svg" alt="cross" />
         </div>
         <button class="btn_signup btn" type="button">SIGNUP</button>
         <button class="btn_login btn" type="button">LOGIN</button>
@@ -54,14 +54,14 @@
         />
         <div class="confirm">
           <input
-          type="password"
-          name="confirmPassword"
-          id="confirmPassword"
-          placeholder="password"
-          required
-        />
+            type="password"
+            name="confirmPassword"
+            id="confirmPassword"
+            placeholder="password"
+            required
+          />
         </div>
-        
+
         <br />
         <input type="checkbox" name="checkbox" id="checkbox" />
         <label for="checkbox">Remember me</label>
@@ -71,8 +71,9 @@
         <p>Not a member yet? <span class="signup_paragraph">Sign up</span></p>
       </form>
     </section>
+
     <!-- ////////////////////////////////////////// -->
-    <section class="search container">
+    <section class="search container" id="search">
       <form class="primar_search">
         <input
           type="text"
@@ -82,27 +83,10 @@
         />
         <button class="btn_search">&#8594;</button>
       </form>
-
-      <p class="search_result_paragraph title">Results for “godfather”</p>
+      <!-- //////////////////////////////////////////// -->
+      <p class="search_result_paragraph title"></p>
       <div class="swiper swiperResult">
-        <div class="swiper-wrapper">
- <!--          <div class="swiper-slide">
-            <div class="swiper_img">
-              <img
-                src="https://s3-alpha-sig.figma.com/img/18d4/e152/3a9723ae5397841adf7fbaed84bd30b2?Expires=1699228800&Signature=dFbxDSkYk7HqiE3NvJT-tMKeDxldU7~2vNXVqn0FkYodDb4qJ511EgOTKmqP11qyHWkNR-Ht8UedqFkvtCKe6W-3rX8-Q96qNODAe3LlmZ4F-DlSTceQkahk3cpYIpEcP5099GZ9OZTTUYJm9JB2aGB~m-LfJaXXiR5tVDWWU7gX7JAoRzYqHtrRdCpU82Q9al92QBeBBdIcfxIaK4s9dKExrfu7Uga3b8rnINKzIaq2qSdRCNHBHV1yYXDB-TxzIWROQRAo88aHK03XdNvpG3yyk-dhBq5eA82niTnAboFO85WFlEXOCW-uC0BT0CVWpIc4DmVIwQazA830IKVWKQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                alt=""
-              />
-            </div>
-            <div class="mouseenter_film_info">
-              <h1 class="film_title">The Godfather part III</h1>
-              <p class="film_year">1990</p>
-              <p class="film_genres">Crime / Drama / Thriller</p>
-              <img src="img/star.svg" alt="star" />
-              <p class="film_points">7.4</p>
-            </div>
-          </div>
-          <div class="swiper-slide">Slide 2</div>
-        </div>
+        <div class="swiper-wrapper"></div>
       </div>
       <div class="swiper_btn_wraper">
         <div class="swiper-button-next result-button-next">
@@ -110,7 +94,7 @@
         </div>
         <div class="swiper-button-prev result-button-prev">
           <img src="img/arrow-prev.svg" alt="" />
-        </div> -->
+        </div>
       </div>
     </section>
     <!-- //////////////////////////////////////// -->
@@ -132,7 +116,7 @@
       </div>
     </section>
     <!-- //////////////////////////////////////////// -->
-    <section class="movies_by_genre container">
+    <section class="movies_by_genre container" id="genre">
       <div class="block">
         <h1>Movies by genre</h1>
         <ul class="genre_nav">
@@ -144,7 +128,7 @@
           <a href="#"><li>Animation</li></a>
         </ul>
       </div>
-      <p class="movie_genre_paragraph title">Comedy</p>
+      <p class="movie_genre_paragraph title"></p>
       <div class="swiper swiper_genres">
         <div class="swiper-wrapper">
           <!-- <div class="swiper-slide">Slide 1</div>
@@ -166,9 +150,9 @@
     <section class="footer container">
       <h1 class="logo"><span>BE</span>MOVIES</h1>
       <ul class="nav footer_nav">
-        <a href="#"><li class="search_nav">SEARCH</li></a>
-        <a href="#"><li class="latest_nav">LATEST</li></a>
-        <a href="#"><li class="genres_nav">GENRES</li></a>
+        <a href="#search"><li class="search_nav">SEARCH</li></a>
+        <a href="#latest"><li class="latest_nav">LATEST</li></a>
+        <a href="#genre"><li class="genres_nav">GENRES</li></a>
         <a href="#"><li class="register_nav">REGISTER</li></a>
         <a href="#"><li class="signin_nav">SIGNIN</li></a>
       </ul>
@@ -184,33 +168,32 @@
         </div>
         <div class="modal_text_pic">
           <img
-          class="film_img"
-          src="https://s3-alpha-sig.figma.com/img/18d4/e152/3a9723ae5397841adf7fbaed84bd30b2?Expires=1699228800&Signature=dFbxDSkYk7HqiE3NvJT-tMKeDxldU7~2vNXVqn0FkYodDb4qJ511EgOTKmqP11qyHWkNR-Ht8UedqFkvtCKe6W-3rX8-Q96qNODAe3LlmZ4F-DlSTceQkahk3cpYIpEcP5099GZ9OZTTUYJm9JB2aGB~m-LfJaXXiR5tVDWWU7gX7JAoRzYqHtrRdCpU82Q9al92QBeBBdIcfxIaK4s9dKExrfu7Uga3b8rnINKzIaq2qSdRCNHBHV1yYXDB-TxzIWROQRAo88aHK03XdNvpG3yyk-dhBq5eA82niTnAboFO85WFlEXOCW-uC0BT0CVWpIc4DmVIwQazA830IKVWKQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-          alt=""
-        />
+            class="film_img"
+            src="https://s3-alpha-sig.figma.com/img/18d4/e152/3a9723ae5397841adf7fbaed84bd30b2?Expires=1699228800&Signature=dFbxDSkYk7HqiE3NvJT-tMKeDxldU7~2vNXVqn0FkYodDb4qJ511EgOTKmqP11qyHWkNR-Ht8UedqFkvtCKe6W-3rX8-Q96qNODAe3LlmZ4F-DlSTceQkahk3cpYIpEcP5099GZ9OZTTUYJm9JB2aGB~m-LfJaXXiR5tVDWWU7gX7JAoRzYqHtrRdCpU82Q9al92QBeBBdIcfxIaK4s9dKExrfu7Uga3b8rnINKzIaq2qSdRCNHBHV1yYXDB-TxzIWROQRAo88aHK03XdNvpG3yyk-dhBq5eA82niTnAboFO85WFlEXOCW-uC0BT0CVWpIc4DmVIwQazA830IKVWKQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            alt=""
+          />
 
-        <div class="film_discription">
-          <h1 class="film_title">The Godfather</h1>
-          <p class="year"></p>
-          <p class="rating"><img src="img/star.svg" alt="" /> 8.7</p>
-          <p class="genrs">Crime / Drama</p>
-          <p class="description">
-            Spanning the years 1945 to 1955, a chronicle of the fictional
-            Italian-American Corleone crime family. When organized crime family
-            patriarch, Vito Corleone barely survives an attempt on his life, his
-            youngest son, Michael steps in to take care of the would-be killers,
-            launching a campaign of bloody revenge.
-          </p>
-          <div class="cast_block">
-            <span>CAST:</span>
-            <p>Marlon Brando, Al Pacino, James Caan, Robert Duvall</p>
+          <div class="film_discription">
+            <h1 class="film_title">The Godfather</h1>
+            <p class="year"></p>
+            <p class="rating"><img src="img/star.svg" alt="" /> 8.7</p>
+            <p class="genrs">Crime / Drama</p>
+            <p class="description">
+              Spanning the years 1945 to 1955, a chronicle of the fictional
+              Italian-American Corleone crime family. When organized crime
+              family patriarch, Vito Corleone barely survives an attempt on his
+              life, his youngest son, Michael steps in to take care of the
+              would-be killers, launching a campaign of bloody revenge.
+            </p>
+            <div class="cast_block">
+              <span>CAST:</span>
+              <p>Marlon Brando, Al Pacino, James Caan, Robert Duvall</p>
+            </div>
           </div>
         </div>
-        </div>
-        
       </div>
     </section>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
   </body>
